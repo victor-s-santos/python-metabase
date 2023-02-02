@@ -21,11 +21,11 @@ services:
       MB_DB_PASS: '${DB_PASSWORD}'
       JAVA_TIMEZONE: '${MB_JAVA_TIMEZONE}'
     ports:
-      # <Port exposed>:<Port running inside container>
       - '${MB_PORT}:3000'
+    
     volumes:
-      # Volumes where Metabase data will be persisted
       - 'mb-data:/metabase-data'
+    
     depends_on:
       - 'db'
 
