@@ -1,11 +1,11 @@
-version: '3.3'
+version: '3.8'
 
 services:
     db:
       image: postgres
       restart: always
       environment:
-        - POSTGRES_PASSWORD=PASWORD
+        - POSTGRES_PASSWORD=PASSWORD
         - POSTGRES_USER=USERNAME
         - POSTGRES_DB=DATABASE
       ports:
@@ -23,7 +23,7 @@ services:
         - MB_DB_DBNAME=DATABASE
         - MB_DB_PORT=5432
         - MB_DB_USER=USERNAME
-        - MB_DB_PASS=PASWORD
+        - MB_DB_PASS=PASSWORD
         - MB_DB_HOST=db
       ports:
         - 3000:3000
