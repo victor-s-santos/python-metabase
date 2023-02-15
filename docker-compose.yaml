@@ -3,7 +3,7 @@ version: '3.8'
 services:
     db:
       image: postgres
-      restart: always
+      #restart: always
       environment:
         - POSTGRES_PASSWORD=PASSWORD
         - POSTGRES_USER=USERNAME
@@ -27,7 +27,7 @@ services:
       ports:
         - 3000:3000
       image: metabase/metabase
-      restart: always
+      #restart: always
       depends_on: 
         - db
       networks:
